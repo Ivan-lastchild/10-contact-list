@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    font: 16px/1.2 'Tahoma', sans-serif;
+}
+
+.table_block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.table{
+    min-width: 300px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table th, 
+.table td {
+    border: 1px solid #808080;
+    padding: 5px;
+}
+
+.contact {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input {
+    width: 150px;
+    margin: 5px;
+}
+
+.btn {
+    width: 168px;
+    height: 25px;
+    background-color: #abcdef;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    transition: all 0.2s;
+    background-color: #d2deeb;
+}
