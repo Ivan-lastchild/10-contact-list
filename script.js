@@ -1,13 +1,12 @@
-
 const table = document.querySelector('.table');
 const btn = document.querySelector(".btn");
 const userName = document.querySelector(".user_name");
 const userSurname = document.querySelector(".user_surname");
 const userNumber = document.querySelector(".user_number");
+const reg = /^[$A-Za-zА-Яа-яъё]+$/;
+const regNum = /^[0-9]+$/;
 
 btn.addEventListener('click', addToContacts);
-
-console.log(!isNaN("sdf345345"));
 
 function addToContacts(){
 
@@ -29,7 +28,7 @@ function createRow(){
 function checkEmptyCell(form1, form2, form3){
     if(!form1.value || !form2.value || !form3.value) {
         alert('Please, add all cells');
-    } else if((!isNaN(form1.value) || !isNaN(form2.value)) || isNaN(form3.value)){
+    } else if(!reg.test(form1.value) || !reg.test(form2.value) || !regNum.test(form3.value)){
         alert("Please, add correct values");
     } else createRow();
 }
